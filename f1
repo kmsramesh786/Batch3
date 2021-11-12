@@ -1,0 +1,267 @@
+
+git init                                          (to initialize the git)
+git config --global user.name "XYZ"               (providing user name)
+git config --global user.email "XYZ@gmail.com"    (providing user email) 
+
+git config --list                                    
+
+
+-----------------------
+touch file1                                         (to create empty file)
+                                      
+ls                                                  (to view list)
+
+ls -lrth                                             (to view long list)
+
+git status
+
+git add file1
+
+git status
+
+git commit -m "label" file1
+
+git status
+
+git log
+
+git show cid
+
+----------------------------------
+touch file2 file3 file4
+ls
+git add .
+or
+git add *
+or
+git add -A
+or
+git add file2 file3 file4
+git status
+git commit -m "label"
+git show cid
+
+--------------------------------------
+
+git reset HEAD file-name  (staging to workspace)
+git reset --soft cid  (local to staging/index, {n-1})
+git reset --mixed cid  (local to workspace)
+
+
+
+
+---------------------------------------------------------
+git clone https://github.com/XYZ/devops.git
+ls
+cd devops
+ls
+touch file2 file3 file4
+ls
+git add .
+or
+git add *
+or
+git add -A
+or
+git add file2 file3 file4
+git status
+git commit -m "label"
+git show cid
+git push
+---------------------------------
+
+git clone https://github.com/XYZ/devops.git
+ls
+cd devops
+ls
+touch devops
+ls
+git add devops
+git commit -m "commit by devops"
+git push
+git pull --rebase
+git push
+
+
+----------------------
+git log
+git log -n
+git log --oneline
+git log --author=XYZ
+git log --author=XYZ -n
+git log --author=XYZ --oneline
+git log --author=XYZ --oneline -n
+git log --grep="Update XYZ"
+git log -- file-name
+
+BRANCH
+--------
+git branch
+git branch release1
+git branch
+git checkout release1
+git merge branch-name
+git cherry-pick cid
+
+git push origin branch-name
+or
+git push https://github.com/devopstraininghub/Batch3.git branch-name
+
+git branch -d branch-name
+
+git push origin -d branch-name
+
+
+-----------------------------------------
+Touch, Cat, Vi
+---------------
+touch file1
+touch file2 file3 file4
+
+
+
+cat file1
+
+VI
+--
+
+vi file3
+--------
+esc i
+....
+....
+....
+esc :w
+esc :q
+or
+esc :wq
+or
+esc :wq!
+
+
+TAG
+----
+git tag
+git tag tag-name
+git tag -d tag-name
+
+git tag t1.0 cid
+
+git push origin t1.0
+git push --tags
+
+git push origin -d t1.0
+
+------------------------
+Stash
+-----
+git stash list
+git stash save "label"
+
+git stash show stash@{x}
+
+
+POP, APPLY, DROP
+-----------------
+POP - cut
+----
+git stash pop
+
+
+APPLY  - copy
+------
+git stash apply
+
+
+DROP  - delete
+-----
+git stash drop
+
+
+---------------------------------------
+
+Alias
+-----
+git status
+git config --global alias.s "status"
+git s
+
+git stash list
+git config --global alias.sl "stash list"
+git sl
+
+git log
+git config --global alias.l "log"
+git l
+
+git log --oneline
+git config --global alias.lo "log --oneline"
+git l1
+
+
+amend
+-----
+git commit --amend -m "label" -m "label2" -m "label3"
+
+
+diff merge & rebase
+---------------------
+
+
+revert
+------
+git revert cid
+
+.gitignore
+----------
+
+
+fetch
+-----
+git pull= git fetch + git merge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
